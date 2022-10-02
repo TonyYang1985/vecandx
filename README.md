@@ -54,5 +54,14 @@ Alternatively, you can run `dart migrate --ignore-errors`, but you might
 get erroneous migration suggestions.
 
 
->dart migrate   
->dart pub outdated --mode=null-safety
+> dart migrate   
+> dart pub outdated --mode=null-safety
+> flutter upgrade
+> flutter pub get
+> flutter analyze
+> dart analyze
+
+
+1. Set the lower SDK constraint (in pubspec.yaml) to a version before 2.12.
+2. Run `dart pub get`.
+3. Try running `dart migrate` again.
