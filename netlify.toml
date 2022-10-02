@@ -5,4 +5,4 @@
   command = "./build.sh"
 
   # The relative path to the directory to be published
-  publish = "build/web"
+  publish = "/opt/build/repo/build/web"
