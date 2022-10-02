@@ -5,7 +5,6 @@ A new Flutter project.
 ## flutter submodule
 > git submodule add https://github.com/flutter/flutter.git
 
-
 ## build  build.sh
 ```bash
 # Get flutter
@@ -20,6 +19,8 @@ $FLUTTER build web --release
 
 echo "Build Web Application Success!!!"
 ```
+## chmod  build.sh
+> chmod u+x build.sh
 
 ## netlify  netlify.toml
 
