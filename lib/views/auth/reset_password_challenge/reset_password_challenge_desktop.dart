@@ -104,9 +104,11 @@ class _ResetPasswordChallengeDesktop extends StatelessWidget {
                                   return SizedBox(
                                     width: double.infinity,
                                     height: 45,
-                                    child: RaisedButton(
-                                      color: Theme.of(context).primaryColor,
-                                      textColor: Colors.white,
+                                    child: ElevatedButton(
+                                     style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                                       onPressed: form.control('userName').valid && !viewModel.isLoading
                                           ? () => _getSecurityQuestions(form)
                                           : null,
@@ -120,9 +122,11 @@ class _ResetPasswordChallengeDesktop extends StatelessWidget {
                                   return SizedBox(
                                     width: double.infinity,
                                     height: 45,
-                                    child: RaisedButton(
-                                      color: Theme.of(context).primaryColor,
-                                      textColor: Colors.white,
+                                    child: ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                                       onPressed:
                                           form.valid && !viewModel.isLoading ? () => _verifySecurityAnswer(form) : null,
                                       child: viewModel.isLoading ? LoadingWidget(size: 20, stroke: 2) : Text('Verify'),

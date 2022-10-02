@@ -103,9 +103,11 @@ class __ResetPasswordDesktopState extends State<_ResetPasswordDesktop> {
                             return SizedBox(
                               width: double.infinity,
                               height: 45,
-                              child: RaisedButton(
-                                color: Theme.of(context).primaryColor,
-                                textColor: Colors.white,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                                 onPressed:
                                     form.valid && !widget.viewModel.isLoading ? () => _onResetPassword(form) : null,
                                 child: widget.viewModel.isLoading

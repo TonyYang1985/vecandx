@@ -33,3 +33,26 @@ echo "Build Web Application Success!!!"
   publish = "build/web"
 
 ```
+
+
+> dart migrate
+
+> dart pub outdated --mode=null-safety
+
+
+Update dependencies
+Before migrating your package’s code, update its dependencies to null-safe versions:
+
+> Run dart pub upgrade --null-safety 
+to upgrade to the latest versions supporting null safety. Note: This command changes your pubspec.yaml file.
+
+Run dart pub get.
+> dart pub get
+
+We recommend fixing the analysis issues before running `dart migrate`.
+Alternatively, you can run `dart migrate --ignore-errors`, but you might
+get erroneous migration suggestions.
+
+
+>dart migrate   
+>dart pub outdated --mode=null-safety

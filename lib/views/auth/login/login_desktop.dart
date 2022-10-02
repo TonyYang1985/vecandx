@@ -88,9 +88,11 @@ class _LoginDesktop extends StatelessWidget {
                               return SizedBox(
                                 width: double.infinity,
                                 height: 45,
-                                child: RaisedButton.icon(
-                                  color: Theme.of(context).primaryColor,
-                                  textColor: Colors.white,
+                                child: ElevatedButton.icon(
+                                 style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                                   onPressed:
                                       form.valid && !viewModel.isLoading ? () => _onLogin(form, buildContext) : null,
                                   label: Text('Login'),

@@ -9,7 +9,7 @@ class ApiClient {
   final StorageService storageService;
   Dio _client = Dio();
 
-  ApiClient({required this.storageService}) {
+  ApiClient({@required this.storageService}) {
     final options = BaseOptions(
       baseUrl: baseUrl,
       // queryParameters: {'key': this.dotEnv.env['API_KEY']},
@@ -26,7 +26,7 @@ class ApiClient {
     return {};
   }
 
-  Future<Response<T>> get<T>(String url, {required Map<String, dynamic> queryParameters, Options? options}) {
+  Future<Response<T>> get<T>(String url, {@required Map<String, dynamic> queryParameters, Options options}) {
     if (options != null) {
       options.headers = _getAuthHeaders();
     } else {
@@ -42,9 +42,9 @@ class ApiClient {
   Future<Response<dynamic>> downloadFile(
     String url,
     String savePath, {
-    Map<String, dynamic>? queryParameters,
-    Function(int received, int total)? onReceiveProgress,
-    Options? options,
+    Map<String, dynamic>queryParameters,
+    Function(int received, int total) onReceiveProgress,
+    Options options,
     bool deleteOnError = true,
   }) {
     if (options != null) {
@@ -65,7 +65,7 @@ class ApiClient {
   Future<Response<T>> post<T>(
     String url, {
     data,
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) {
     var options = Options(headers: _getAuthHeaders());
     return _client.post<T>(
@@ -79,7 +79,7 @@ class ApiClient {
   Future<Response<T>> put<T>(
     String url, {
     data,
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) {
     var options = Options(headers: _getAuthHeaders());
     return _client.put<T>(
@@ -93,7 +93,7 @@ class ApiClient {
   Future<Response<T>> patch<T>(
     String url, {
     data,
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) {
     var options = Options(headers: _getAuthHeaders());
     return _client.patch<T>(
@@ -107,7 +107,7 @@ class ApiClient {
   Future<Response<T>> delete<T>(
     String url, {
     data,
-    Map<String, dynamic>? queryParameters,
+    Map<String, dynamic> queryParameters,
   }) {
     var options = Options(headers: _getAuthHeaders());
     return _client.delete<T>(

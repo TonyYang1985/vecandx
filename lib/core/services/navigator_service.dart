@@ -58,9 +58,11 @@ class NavigatorService extends BaseService {
               SizedBox(
                 width: 120,
                 height: 35,
-                child: RaisedButton(
-                  color: Theme.of(context).primaryColor,
-                  textColor: Colors.white,
+                child: ElevatedButton(
+             style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                   onPressed: () => Navigator.of(context).pop(),
                   child: Text('No'),
                 ),
@@ -110,9 +112,11 @@ class NavigatorService extends BaseService {
               SizedBox(
                 width: 120,
                 height: 35,
-                child: RaisedButton(
-                  color: Theme.of(context).primaryColor,
-                  textColor: Colors.white,
+                child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+foregroundColor: Colors.white,
+backgroundColor: Theme.of(context).primaryColor
+),
                   onPressed: () => Navigator.of(context).pop(),
                   child: Text('No'),
                 ),
