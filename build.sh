@@ -5,7 +5,7 @@
 FLUTTER=flutter/bin/flutter
 
 # Configure flutter
-$FLUTTER channel stable
+#$FLUTTER channel stable
 # $FLUTTER upgrade
 $FLUTTER config --enable-web
 # build web
