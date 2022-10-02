@@ -5,8 +5,8 @@
 FLUTTER=flutter/bin/flutter
 
 # Configure flutter
-$FLUTTER channel beta
-$FLUTTER upgrade
+$FLUTTER channel stable
+# $FLUTTER upgrade
 $FLUTTER config --enable-web
 # build web
 $FLUTTER build web --release
