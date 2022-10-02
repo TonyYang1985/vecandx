@@ -2,15 +2,33 @@
 
 A new Flutter project.
 
-## Getting Started
+## flutter submodule
+> git submodule add https://github.com/flutter/flutter.git
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## build  build.sh
+```bash
+# Get flutter
+# git clone https://github.com/flutter/flutter.git
+FLUTTER=flutter/bin/flutter
+# Configure flutter
+$FLUTTER channel beta
+$FLUTTER upgrade
+$FLUTTER config --enable-web
+# build web
+$FLUTTER build web --release
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+echo "Build Web Application Success!!!"
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## netlify  netlify.toml
+
+```bash
+[build]
+  # Our Flutter Web build command
+  command = "./build.sh"
+
+  # The relative path to the directory to be published
+  publish = "build/web"
+
+```
