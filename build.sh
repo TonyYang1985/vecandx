@@ -7,7 +7,7 @@ FLUTTER=flutter/bin/flutter
 # Configure flutter
 # $FLUTTER_BIN channel beta
 # $FLUTTER_BIN upgrade
-$FLUTTER config --enable-web
+# $FLUTTER config --enable-web
 $FLUTTER_BIN build web
 
 echo "Build Web Application Success!!!"
