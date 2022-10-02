@@ -1,10 +1,10 @@
 [build]
 
-  base = "/"
+  base = "."
 
   # Our Flutter Web build command
-  #command = "if cd flutter; then git pull && cd ..; else git clone https://github.com/flutter/flutter.git; fi && flutter/bin/flutter config --enable-web && flutter/bin/flutter build web"
-  command = "./build.sh"
+  command = "if cd flutter; then git pull && cd ..; else git clone https://github.com/flutter/flutter.git; fi && flutter/bin/flutter config --enable-web && flutter/bin/flutter build web"
+  #command = "./build.sh"
 
   # The relative path to the directory to be published
   publish = "/web"
