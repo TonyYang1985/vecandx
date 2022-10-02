@@ -8,7 +8,7 @@ FLUTTER=flutter/bin/flutter
 # $FLUTTER channel stable
 
 FLUTTER_CHANNEL=stable
-FLUTTER_VERSION=v3.3.3
+FLUTTER_VERSION=v3.0.0
 $FLUTTER channel $FLUTTER_CHANNEL
 $FLUTTER version $FLUTTER_VERSION
 
