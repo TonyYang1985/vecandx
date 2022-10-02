@@ -5,7 +5,13 @@
 FLUTTER=flutter/bin/flutter
 
 # Configure flutter
-#$FLUTTER channel stable
+# $FLUTTER channel stable
+
+FLUTTER_CHANNEL=stable
+FLUTTER_VERSION=v3.3.3
+$FLUTTER channel $FLUTTER_CHANNEL
+$FLUTTER version $FLUTTER_VERSION
+
 # $FLUTTER upgrade
 $FLUTTER config --enable-web
 # build web
